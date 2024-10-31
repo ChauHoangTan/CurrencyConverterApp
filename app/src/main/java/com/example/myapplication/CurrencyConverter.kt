@@ -3,7 +3,6 @@ package com.example.myapplication
 import android.annotation.SuppressLint
 import android.content.Context
 import android.widget.TextView
-import com.example.myapplication.ErrorHandler.ErrorMessages
 
 class CurrencyConverter(private val exchangeRatesByEU: Map<String, Double>) {
     // convert an amount from a currency to another
