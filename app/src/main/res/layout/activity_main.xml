@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#FFFBFB"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20sp"
+                    android:gravity="center_horizontal"
+                    android:layout_marginVertical="20sp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Currency Converter"
+                        android:textStyle="bold"
+                        android:textSize="25sp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Check live rates, convert from a currency to another"
+                        android:textStyle="bold"
+                        android:textColor="#a68d4c"
+                        android:textSize="18sp"
+                        android:gravity="center_horizontal"
+                        />
+                </LinearLayout>
+
+                <androidx.cardview.widget.CardView
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    card_view:cardCornerRadius="20sp"
+                    card_view:cardElevation="5sp"
+                    android:layout_marginHorizontal="10sp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="20dp"
+                        android:background="#FFFFFF"
+                        >
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Amount"
+                                android:textSize="18sp"
+                                android:id="@+id/textAmount1"
+                                android:layout_marginBottom="10sp"/>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_below="@+id/textAmount1"
+                                android:id="@+id/currency1"
+                                android:divider="@color/black"
+                                android:dividerPadding="20sp"
+                                android:gravity="center_vertical"
+                                >
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"/>
+                                <Spinner
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:minHeight="48dp"
+                                    android:id="@+id/spinnerFrom"/>
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    card_view:cardCornerRadius="10sp"
+                                    android:elevation="10sp">
+                                    <EditText
+                                        android:id="@+id/amountFrom"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:hint="0"
+                                        android:textAlignment="textEnd"
+                                        android:background="#F4F4F4"
+                                        android:paddingHorizontal="10sp"
+                                        android:paddingVertical="10sp"
+                                        android:textColor="@color/black"
+                                        android:textStyle="bold"
+                                        android:minHeight="48dp"
+                                        android:inputType="number"
+                                        />
+                                </androidx.cardview.widget.CardView>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:id="@+id/divivder"
+                                android:layout_below="@+id/currency1"
+                                android:gravity="center"
+                                android:weightSum="2"
+                                android:layout_marginVertical="10sp">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:height="3sp"
+                                    android:background="#F4F4F4"
+                                    android:layout_weight="1"/>
+                                <ImageButton
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/button_change"
+                                    android:background="#FFFFFF"
+                                    android:id="@+id/changeCurrenciesButton"
+                                    />
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:height="3sp"
+                                    android:background="#F4F4F4"
+                                    android:layout_weight="1"/>
+                            </LinearLayout>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Converted amount"
+                                android:textSize="18sp"
+                                android:id="@+id/textAmount2"
+                                android:layout_below="@+id/divivder"
+                                android:layout_marginBottom="10sp"/>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_below="@+id/textAmount2"
+                                android:gravity="center_vertical">
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"/>
+                                <Spinner
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:minHeight="48dp"
+                                    android:id="@+id/spinnerTo"/>
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    card_view:cardCornerRadius="10sp"
+                                    android:elevation="10sp">
+                                    <ScrollView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        >
+                                        <EditText
+                                            android:id="@+id/amountTo"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:hint="0"
+                                            android:textAlignment="textEnd"
+                                            android:background="#F4F4F4"
+                                            android:paddingHorizontal="10sp"
+                                            android:paddingVertical="10sp"
+                                            android:textStyle="bold"
+                                            android:textColor="@color/black"
+                                            android:enabled="false"
+                                            android:minHeight="48dp"
+                                            android:inputType="number" />
+                                    </ScrollView>
+
+                                </androidx.cardview.widget.CardView>
+                            </LinearLayout>
+
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginHorizontal="10sp"
+                    android:layout_marginTop="20sp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Indicative Exchange Rate"
+                        android:textSize="18sp"
+                        android:textColor="#a68d4c"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/exchangeRate"
+                        android:textSize="20sp"
+                        android:textStyle="bold"/>
+                </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+  </androidx.constraintlayout.widget.ConstraintLayout>

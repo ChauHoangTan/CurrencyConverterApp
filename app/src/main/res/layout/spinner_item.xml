@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center"
+    tools:ignore="UseCompoundDrawables"
+    android:padding="10sp">
+    <ImageView
+        android:layout_width="45sp"
+        android:layout_height="30sp"
+        android:id="@+id/imgView"
+        android:contentDescription="Image Currency"
+        android:background="@drawable/rounded_border"
+        android:padding="2sp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView"
+        android:layout_marginStart="20sp"
+        android:textStyle="bold"
+        android:text="Currency"
+        android:textSize="16sp"/>
+</LinearLayout>

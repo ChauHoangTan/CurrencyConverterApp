@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Màu nền của LinearLayout -->
+    <solid android:color="#FFFFFF" />
+
+    <!-- Đặt bo góc cho các góc của LinearLayout -->
+    <corners android:radius="0dp" />
+
+    <!-- Đặt màu và độ dày cho viền -->
+    <stroke
+        android:width="2dp"
+        android:color="#E4E4E4" />
+</shape>
